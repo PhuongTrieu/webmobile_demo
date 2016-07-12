@@ -1,0 +1,41 @@
+<h1>{{title}}</h1>
+<button ng-click="getChallegnes()">Get Challenges</button>
+<hr>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <!--Sidebar content-->
+
+      <p>
+        Search:
+        <input ng-model="$ctrl.query" />
+      </p>
+
+    </div>
+      
+    <div class="col-md-2">
+
+      <p>
+        Total Reward: {{total_rewards}}
+      </p>
+
+    </div>
+      
+    <div class="col-md-10">
+      <!--Body content-->
+
+      <ul class="phones">
+        <li ng-repeat="challenge in challenges | filter:$ctrl.query"
+            class="thumbnail phone-list-item">
+          <a href="#!/challenges/{{challenge.id}}" class="thumb">
+            <img ng-src="{{challenge['game']['icon']}}" alt="{{challenge['game']['title']}}" />
+          </a>
+          <a href="#!/challenges/{{challenge.id}}">{{challenge['game']['title']}}</a>
+          <p>{{challenge['game']['title']}}</p>
+          <p>Total users: {{challenge['total_users']}}</p>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
