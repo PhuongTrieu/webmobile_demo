@@ -1,8 +1,10 @@
 'use strict';
 
-// Define the `phonecatApp` module
-var phonecatApp = angular.module('webmobile_demo', [
-  'challengeList'
+// Define the `webmobileDemo` module
+var webmobileDemo = angular.module('webmobileDemo', [
+  'challengeList',
+  'ngAnimate',
+  'ngRoute'
 ]);
 
 window.fbAsyncInit = function() {

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.
-  module('webmobile_demo').
+  module('webmobileDemo').
   config(['$locationProvider' ,'$routeProvider',
     function config($locationProvider, $routeProvider) {
       $locationProvider.hashPrefix('!');
