@@ -1,3 +1,3 @@
 'use_strict';
 
-angular.module('challengeList', []);
+angular.module('challengeList', ["core.APIService"]);

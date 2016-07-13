@@ -4,7 +4,8 @@
 var webmobileDemo = angular.module('webmobileDemo', [
   'challengeList',
   'ngAnimate',
-  'ngRoute'
+  'ngRoute',
+  'core'
 ]);
 
 window.fbAsyncInit = function() {
