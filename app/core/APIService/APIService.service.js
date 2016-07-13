@@ -17,6 +17,13 @@ angular
         return $http.get('http://192.168.3.3:3000/api/web_v1/challenges?' + params, headers);
       };
       
+      factory.getChallengeDetail = function(id) {
+        var headers = {
+          headers: {"Http-Es-Access-Token": "Kz13ZzmE_8mrh_7iiZZziQ"}
+        };
+        return $http.get('http://192.168.3.3:3000/api/web_v1/challenges/' + id.toString(), headers);
+      };
+      
       return factory;
     }
   ]);

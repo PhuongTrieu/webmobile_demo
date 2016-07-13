@@ -10,8 +10,9 @@ angular.
         when('/challenges', {
           template: '<challenge-list></challenge-list>'
         }).
-        otherwise('/challenges', {
-          template: '<challenge-list></challenge-list>'
-        });
+        when('/challenges/:id', {
+          template: '<challenge-detail></challenge-detail>'
+        }).
+        otherwise('/challenges');
     }
   ]);
